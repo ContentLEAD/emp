@@ -1,0 +1,9 @@
+{
+    "questions": [{
+        "Id": 1,"Question": "My First Questions","Answer":"I lied","Type": "multiple-choice","Options": [1,2,3,4]
+    },{
+        "Id": 2,"Question": "My second Questions","Answer":"","Type": "multiple-choice","Options": [1,2,3,4]
+    },{
+        "Id": 3,"Question": "My third Questions","Answer":"","Type": "multiple-choice","Options": [1,2,3,4]
+    }]
+}
