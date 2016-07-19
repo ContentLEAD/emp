@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="employmentApp">
+    <head>
+        <title>app | test</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <!-- For Live version from CDN
+        <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.5.7/angular-route.min.js"></script>
+        -->
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="mainController">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Employment Assesment</h1>
+                    <div class="col-sm-6">
+                    {{ userName }}
+                    </div>
+                    <div class="col-sm-6">
+                    {{ questionId }} of 12
+                    </div>
+                </div>
+                <form>
+                <div class="col-sm-4 form-group">
+                    Please enter your name<br/>
+                    <input typ="text" ng-model="userName" class="form-control">
+                </div>
+                    <div class="col-sm-4 form-group">
+                    What position are you applying for<br/>
+                    <input typ="text" ng-model="testType" class="form-control">
+                </div>
+                    <input type="button" ng-click="startTest()" value="Start Test">
+                </form>
+            </div>
+        </div>
+        <div class="container" ng-controller="testController">
+            <h3>{{ TestQuestion.Question }}</h3>
+            <ul ng-if="TestQuestion.Type == 'multiple-choice'">
+                <li ng-repeat="choice in TestQuestion.Options">{{ choice }}</li>
+            </ul>
+            
+        </div>
+    </body>
+</html>
